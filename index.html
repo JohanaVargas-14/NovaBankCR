@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaBank CR - Maqueta educativa</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <ion-app class="app-shell">
+      <header class="topbar">
+        <button class="brand-button" data-go="email" aria-label="Volver al inicio">
+          <span class="brand-mark">N</span>
+          <span>
+            <strong>NovaBank CR</strong>
+            <small>Maqueta educativa</small>
+          </span>
+        </button>
+        <nav class="nav-actions" aria-label="Navegacion principal">
+          <button class="icon-button" data-go="email" title="Correo simulado" aria-label="Correo simulado">✉</button>
+          <button class="icon-button" data-go="security" title="Seguridad" aria-label="Seguridad">ⓘ</button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="view active" id="email-view" aria-labelledby="email-title">
+          <div class="mobile-frame">
+            <div class="mail-header">
+              <span>Correo recibido</span>
+              <span class="danger-chip">Urgente</span>
+            </div>
+            <article class="mail-card">
+              <p class="sender">Seguridad NovaBank &lt;alerta@novabank-verifica-cr.com&gt;</p>
+              <h1 id="email-title">Actividad sospechosa detectada</h1>
+              <p>
+                Estimado cliente, hemos detectado un acceso inusual a su cuenta. Para evitar el
+                bloqueo temporal, verifique su identidad antes de los proximos 10 minutos.
+              </p>
+              <div class="warning-strip">
+                Su cuenta podria ser limitada si no completa la verificacion.
+              </div>
+              <button class="primary-button" data-go="login">Verificar mi cuenta</button>
+            </article>
+          </div>
+
+        </section>
+
+        <section class="view" id="login-view" aria-labelledby="login-title">
+          <div class="auth-layout">
+            <div class="trust-column">
+              <span class="lock-badge">🔒</span>
+              <h1 id="login-title">Banca en linea NovaBank CR</h1>
+              <p>
+                Ingrese sus credenciales para continuar con la verificacion preventiva de seguridad.
+              </p>
+              <div class="trust-grid">
+                <span>Conexion segura</span>
+                <span>Proteccion 24/7</span>
+                <span>Validacion inmediata</span>
+              </div>
+            </div>
+
+            <form class="login-card" id="login-form" autocomplete="off">
+              <label>
+                Usuario
+                <input id="user-input" type="text" placeholder="usuario.demo" required />
+              </label>
+              <label>
+                Contrasena
+                <input id="password-input" type="password" placeholder="********" required />
+              </label>
+              <button class="primary-button" type="submit">Ingresar</button>
+              <button class="ghost-button" type="button" data-go="email">Volver al correo</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="view" id="otp-view" aria-labelledby="otp-title">
+          <div class="otp-card">
+            <div class="otp-icon">#</div>
+            <h1 id="otp-title">Verificacion de identidad</h1>
+            <p>
+              Hemos enviado un codigo temporal a su dispositivo. Ingreselo para confirmar que usted
+              autorizo el acceso.
+            </p>
+            <form id="otp-form" autocomplete="off">
+              <label>
+                Codigo OTP
+                <input id="otp-input" inputmode="numeric" maxlength="6" placeholder="123456" required />
+              </label>
+              <button class="primary-button" type="submit">Continuar</button>
+            </form>
+            <button class="ghost-button" data-go="login">Regresar</button>
+          </div>
+        </section>
+
+        <section class="view" id="education-view" aria-labelledby="education-title">
+          <div class="education-hero">
+            <div>
+              <p class="eyebrow">Resultado</p>
+              <h1 id="education-title">Esta era una simulacion educativa</h1>
+              <p>
+                En un caso real, un atacante intentaria robar usuario, contrasena y codigo OTP.
+                Esta maqueta no guarda informacion y sirve para explicar como reconocer el engaño.
+              </p>
+              
+            </div>
+            <button class="primary-button" data-go="security">Ver senales y controles</button>
+          </div>
+<p class="form-note">
+                Maqueta educativa: los datos no se almacenan, no se envian y se borran al avanzar.
+              </p>
+          <div class="result-grid">
+            <article>
+              <h2>Activo protegido</h2>
+              <p>Credenciales, datos personales, cuentas bancarias y codigos de autenticacion.</p>
+            </article>
+            <article>
+              <h2>Amenaza</h2>
+              <p>Campaña de phishing que imita un banco ficticio para generar confianza.</p>
+            </article>
+            <article>
+              <h2>Riesgo</h2>
+              <p>Robo de identidad, fraude financiero y perdida de confidencialidad.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="security-view" aria-labelledby="security-title">
+          <div class="security-layout">
+            <div>
+              <p class="eyebrow">Prevencion</p>
+              <h1 id="security-title">Senales de alerta incluidas</h1>
+              <div class="redflag-list">
+                <button data-highlight="Dominio sospechoso">Dominio diferente al esperado</button>
+                <button data-highlight="Mensaje de urgencia">Presion para actuar inmediatamente</button>
+                <button data-highlight="Solicitud de credenciales">Pide usuario y contrasena completa</button>
+                <button data-highlight="Codigo OTP">Solicita un codigo de doble factor</button>
+                <button data-highlight="Candado decorativo">El candado visual no prueba legitimidad</button>
+                <button data-highlight="Redaccion alarmante">Usa miedo a bloqueo de cuenta</button>
+              </div>
+            </div>
+            <aside class="control-card">
+              <h2 id="highlight-title">Controles recomendados</h2>
+              <ul>
+                <li>Revisar la URL antes de iniciar sesion.</li>
+                <li>No abrir enlaces bancarios recibidos por correo o SMS.</li>
+                <li>Escribir manualmente la direccion oficial.</li>
+                <li>No compartir codigos OTP.</li>
+                <li>Usar MFA y reportar mensajes sospechosos.</li>
+              </ul>
+              <div class="owasp-box">
+                <strong>Relacion OWASP</strong>
+                <span>Identificacion y autenticacion, diseño inseguro, exposicion de datos sensibles y educacion al usuario.</span>
+              </div>
+              <button class="primary-button" data-go="email">Reiniciar simulacion</button>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </ion-app>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
